@@ -19,9 +19,8 @@
   .main__form
     .main__form_message
       .main__form_message_text  
-        -# .main__form_message_text_form
-        %form{:action => "/", :method => "post"}
-        %input{:text => "message", :size => "100",:placeholder => "put message",class:"message"}
+        %form{action: "/", method: "post"}
+        %input{text: "message", size: "100",placeholder: "put message",class:"message"}
         .main__form_message_text_image
           %label{class: "input-box__image"}
             = icon('fas', 'image')
