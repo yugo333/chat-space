@@ -1,0 +1,115 @@
+
+  .main{
+    height: 100%;
+    width: calc(100vw - 300px);
+    background-color: #cccccc;
+    
+
+    &__info{
+      height: 100px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      padding: 0px 40px;
+      
+      &_title{
+        line-height: 100px;
+        font-size: 20px;
+        margin-bottom: -70px;
+        width: 200px;
+      }
+      &_text{
+        font-size: 12px;
+        margin-top: 5px;
+        color: rgb(173, 173, 173);
+      }
+
+      &_btn{
+        display: flex;
+        flex-direction: row-reverse;
+        box-sizing: border-box;
+        &_edit{
+          padding: 10px 20px;
+          margin: 0px 0px 0px;
+          border: 1px solid blue;
+          color: blue;
+         text-decoration: none;
+
+        }
+      }
+    }
+    &__chat{
+    height: calc(100% - 190px);
+    background-color: #e7e7e7;
+    box-sizing: border-box;
+    padding: 40px;
+
+    
+      &_message{
+        margin-bottom: 40px;
+        width: 500px;
+
+        &_title{
+          font-size: 16px;
+          display: flex;
+          font-weight: bold;
+        }
+          &_day{
+            font-size: 12px;
+            color: rgb(211, 208, 208);
+            margin: 5px;
+          }
+
+        &_title_text{
+          margin-top: 2px;
+          font-size: 14px;
+        }
+      }
+
+    } 
+  }
+
+  .main__form{
+    height: 90px;
+    background-color: gray;
+    width: calc(100vw - 300px);
+    box-sizing: border-box;
+    position: relative;
+    
+    &_message{
+      display: flex;
+      position: absolute;
+        &_text{
+          background-color: rgb(255, 255, 255);
+          margin: 20px 100px 10px 40px;
+          height: 50px;
+          width: 950px;
+
+          .message{
+           height: 100%;
+          }
+
+          &_image{
+            position: absolute;
+            left: 960px;
+            top: 35px;
+          }
+
+          .none{
+            display: none;
+          }
+        }
+        
+
+        &_btn{
+          line-height: 45px;
+          text-align:center;
+          margin-left: -70px;
+          font-weight: bold;
+          margin-top: 20px ;
+          background-color: cyan;
+          height: 50px;
+          width: 70px;
+          color: white;
+        }
+      }
+  }

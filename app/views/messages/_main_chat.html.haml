@@ -1,0 +1,31 @@
+.main
+  .main__info
+    .main__info_title
+      test
+    .main__info_btn
+      =link_to "#",class:"main__info_btn_edit"do
+        Edit
+    .main__info_text
+      wtf
+  
+  .main__chat
+    .main__chat_message
+      .main__chat_message_title
+        mmmmqqq
+        .main__chat_message_day
+          2019/11/27 00:00:00
+      .main__chat_message_title_text
+        rtyujhgfdcvbghytfvbhjytg
+  .main__form
+    .main__form_message
+      .main__form_message_text  
+        %form{action: "/", method: "post"}
+        %input{text: "message", size: "100",placeholder: "put message",class:"message"}
+        .main__form_message_text_image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file", class:"none"}
+      .main__form_message_btn
+        Send
+        
+
