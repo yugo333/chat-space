@@ -75,41 +75,50 @@
     box-sizing: border-box;
     position: relative;
     
+    
     &_message{
-      display: flex;
       position: absolute;
-        &_text{
-          background-color: rgb(255, 255, 255);
-          margin: 20px 100px 10px 40px;
-          height: 50px;
-          width: 950px;
-
-          .message{
-           height: 100%;
-          }
-
-          &_image{
-            position: absolute;
-            left: 960px;
-            top: 35px;
-          }
-
-          .none{
-            display: none;
-          }
+      &_text{
+        background-color: rgb(255, 255, 255);
+        margin: 20px 25px 10px 40px;
+        height: 50px;
+        width: 950px;
+        .new_message{
+          height: 100%;
         }
-        
 
-        &_btn{
-          line-height: 45px;
-          text-align:center;
-          margin-left: -70px;
-          font-weight: bold;
-          margin-top: 20px ;
-          background-color: cyan;
-          height: 50px;
-          width: 70px;
-          color: white;
+          .type{
+            height: 100%;
+            width: calc(100% - 30px);
+            border: none;
+          }
+
+        &_image{
+          position: absolute;
+          left: 960px;
+          top: 35px;
+        }
+
+        .none{
+          display: none;
         }
       }
-  }
+      
+
+      .submit {
+        background-color: $light_blue;
+        border: none;
+        color: $white;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 25px;
+        margin-top: -40px;
+        padding: 0 30px;
+        position: absolute;
+        left: 30px;
+        
+      }
+      
+    }
+}
