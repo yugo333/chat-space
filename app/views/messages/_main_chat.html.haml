@@ -1,12 +1,14 @@
 .main
   .main__info
     .main__info_title
-      test
+      =@group.name
     .main__info_btn
-      =link_to "#",class:"main__info_btn_edit"do
+      =link_to edit_group_path(@group),class:"main__info_btn_edit"do
         Edit
     .main__info_text
-      wtf
+      Mamber:
+      -@group.users.each do |user|
+        =user.name
   
   .main__chat
     .main__chat_message
@@ -19,13 +21,15 @@
   .main__form
     .main__form_message
       .main__form_message_text  
-        %form{action: "/", method: "post"}
-        %input{text: "message", size: "100",placeholder: "put message",class:"message"}
-        .main__form_message_text_image
-          %label{class: "input-box__image"}
-            = icon('fas', 'image')
-            %input{type: "file", class:"none"}
-      .main__form_message_btn
-        Send
-        
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'type', placeholder: 'type a message'
+          .main__form_message_text_image
+            = f.label :image, class: '_image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'none'
+            .main__form_message_btn
+              = f.submit 'Send', class: 'submit'
+
+-# .messages
+-#   = render @messages
 
