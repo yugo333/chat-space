@@ -37,33 +37,35 @@
         }
       }
     }
-    &__chat{
+  &__chat{
     height: calc(100% - 190px);
     background-color: #e7e7e7;
     box-sizing: border-box;
     padding: 40px;
+    overflow: scroll;
 
-    
-      &_message{
-        margin-bottom: 40px;
+    .main__chat_message{
+      position: relative;
+    }
+      .upper-message{
         width: 500px;
+        display: flex;
 
-        &_title{
+        .upper-message__user-name{
           font-size: 16px;
-          display: flex;
           font-weight: bold;
         }
-          &_day{
+          .upper-message__date{
             font-size: 12px;
             color: rgb(211, 208, 208);
             margin: 5px;
           }
-
-        &_title_text{
-          margin-top: 2px;
-          font-size: 14px;
         }
-      }
+          .lower-message{
+            font-size: 14px;
+            line-height: 30px;
+            margin-bottom: 50px;
+          }
 
     } 
   }
@@ -78,6 +80,7 @@
     
     &_message{
       position: absolute;
+
       &_text{
         background-color: rgb(255, 255, 255);
         margin: 20px 25px 10px 40px;

@@ -9,15 +9,11 @@
       Mamber:
       -@group.users.each do |user|
         =user.name
-  
+
   .main__chat
     .main__chat_message
-      .main__chat_message_title
-        mmmmqqq
-        .main__chat_message_day
-          2019/11/27 00:00:00
-      .main__chat_message_title_text
-        rtyujhgfdcvbghytfvbhjytg
+      = render @messages
+  
   .main__form
     .main__form_message
       .main__form_message_text  
@@ -28,8 +24,6 @@
               = icon('fas', 'image', class: 'icon')
               = f.file_field :image, class: 'none'
             .main__form_message_btn
-              = f.submit 'Send', class: 'submit'
+              = f.submit 'Send', class: 'submit' 
 
--# .messages
--#   = render @messages
 
