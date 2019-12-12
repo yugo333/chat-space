@@ -5,7 +5,6 @@ $(function(){
     }else{
       var img = ""
     }
-    console.log(message)
     var html = `<div class="message" data-message-id="${message.user_id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -42,7 +41,8 @@ $(function(){
       $(".main__chat_message").append(html)
       $("#message_content").val('')
       $('.box').animate({'height' : '200px'});
-      $('.main__chat').animate({scrollTop: $('.main__chat')[0].scrollHeight});   
+      $('.main__chat').animate({scrollTop: $('.main__chat')[0].scrollHeight}); 
+      $('form')[0].reset();  
     })
     .fail(function(){
       alert("エラー");
