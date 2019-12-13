@@ -77,7 +77,7 @@ $(function() {
         $(".main__chat_message").append(insertHTML);
       })
       .fail(function() {
-        console.log('error');
+        alert('error');
       });
     };
   setInterval(reloadMessages, 7000);
@@ -86,28 +86,3 @@ $(function() {
 
 
 
-// $(function(){
-//   function buildHTML(message) {
-//     if (message.image) {
-//       img = `<img class="lower-message__image" src="${message.image}">`
-//     }else{
-//       var img = ""
-//     }
-//     var html = `<div class="message" data-message-id="${message.user_id}">
-//                   <div class="upper-message">
-//                     <div class="upper-message__user-name">
-//                       ${ message.name }
-//                     </div>
-//                     <div class="upper-message__date">
-//                       ${ message.created_at }
-//                     </div>
-//                   </div>
-//                   <div class="lower-message">
-//                     <p class="lower-message__content">
-//                     ${ message.content }
-//                     ${ img }
-//                     </p>
-//                   </div>
-//               </div>`
-//     return html;
-//   }
