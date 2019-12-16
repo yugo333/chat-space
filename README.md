@@ -68,3 +68,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+
+<!-- 61b91872795d60d498e67e926a24d69db395990b60053912c060e9eb8a7de3217448c4db41ab658ce0a58c7a53aa72e0b56d1bea80b7ad020901f555e0577ed8 -->
