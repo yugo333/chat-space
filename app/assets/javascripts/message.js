@@ -36,10 +36,10 @@ $(function() {
       processData: false,
       contentType: false
     })
-    .done(function(message){
-      var html =  buildHTML(message);
+    .done(function(data){
+      var html =  buildHTML(data);
       $(".main__chat_message").append(html)
-      $('.box').animate({'height' : '200px'});
+      // $('.box').animate({'height' : '200px'});
       $('.main__chat').animate({scrollTop: $('.main__chat')[0].scrollHeight}); 
       $('form')[0].reset();  
     })
@@ -47,7 +47,7 @@ $(function() {
       alert("エラー");
     })
     .always(function(){
-      $(".submit").prop("disabled",false);
+      $(".form__submit").prop("disabled",false);
     })
   })
   
@@ -72,11 +72,11 @@ $(function() {
           var insertHTML = '';
           //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
           $.each(messages, function(i,message) {
-            insertHTML += buildHTML(message)
+            insertHTML = buildHTML(message)
             $(".main__chat_message").append(insertHTML);
           });
           //メッセージが入ったHTMLに、入れ物ごと追加
-          $(".main__chat_message").append(insertHTML);
+          $('.main__chat').animate({scrollTop: $('.main__chat')[0].scrollHeight}); 
         })
         .fail(function() {
           alert('error');

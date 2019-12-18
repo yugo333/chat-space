@@ -5,9 +5,9 @@
     .aside__user_icon
       .aside__user_icon_btn
         =link_to edit_user_path(current_user) do
-          = icon('fas', 'cog', class: 'icon')
-        = link_to new_group_path do
           = icon("fas","edit") 
+        = link_to new_group_path do
+          = icon('fas', 'cog', class: 'icon')
   .aside__group
     - current_user.groups.each do |group|
       .aside__group_room
